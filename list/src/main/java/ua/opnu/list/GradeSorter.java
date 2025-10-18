@@ -1,0 +1,16 @@
+package ua.opnu.list;
+
+import java.util.Comparator;
+
+public class GradeSorter implements Comparator {
+    @Override
+    public int compare(Object o1, Object o2) {
+        if (o1 instanceof Student && o2 instanceof Student) {
+            Student s1 = (Student) o1;
+            Student s2 = (Student) o2;
+
+            return Double.compare(s1.getAvgMark(), s2.getAvgMark());
+        }
+        return 0;
+    }
+}
